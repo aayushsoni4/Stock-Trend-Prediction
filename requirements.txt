@@ -5,3 +5,4 @@ yfinance
 tensorflow
 streamlit
 plotly
+scikit-learn
