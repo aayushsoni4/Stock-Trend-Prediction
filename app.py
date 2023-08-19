@@ -19,7 +19,7 @@ stocks['Name'] = stocks['Name'].apply(lambda x: dele(x))
 st.title("Stock Trend Prediction")
 
 user_input = 'AAPL'
-user_input = st.selectbox("Select the movie you like", tuple(stocks['Name'].values))
+user_input = st.selectbox("Select the stock you like!", tuple(stocks['Name'].values))
 
 user_input = stocks.loc[stocks['Name'] == user_input, 'Symbol'].values[0] 
 
