@@ -30,7 +30,7 @@ To get started with this project using Git Bash, follow these steps:
 
 1. Clone this repository:
     ```bash
-    git clone https://github.com/yourusername/stock-trend-prediction.git
+    https://github.com/aayushsoni4/Stock-Trend-Prediction.git
     ```
 2. Navigate to the project directory:
     ```bash
