@@ -181,6 +181,5 @@ else:
     
     plt.plot(y_predicted, 'r', label = 'Predicted Price')
     plt.xlabel('Time')
-    plt.xlabel('Price')
     plt.legend()
     st.pyplot(fig2)
