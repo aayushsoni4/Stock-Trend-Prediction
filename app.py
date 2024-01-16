@@ -170,8 +170,8 @@ else:
     y_predicted = y_predicted * scale_factor
     y_test = y_test * scale_factor
 
-    # Final Graph
 
+    # Final Graph
     st.subheader('Predictions vs Original')
     fig2 = plt.figure(figsize=(12,6))
     
@@ -183,3 +183,17 @@ else:
     plt.xlabel('Time')
     plt.legend()
     st.pyplot(fig2)
+
+    # Calculating the true and predicted trends
+    y_true_trend = np.where(y_test[1:] > y_test[:-1], 1, -1)
+    y_pred_trend = np.where(y_predicted[1:] > y_predicted[:-1], 1, -1)
+
+    correct_predictions_count = sum(1 for true, pred in zip(y_true_trend, y_pred_trend) if true == pred)
+    total_predictions = len(y_true_trend)
+
+    # Calculate accuracy
+    accuracy = correct_predictions_count / total_predictions
+    percentage_accuracy = accuracy * 100.0
+
+    # Display accuracy
+    st.write(f"Accuracy of the model: {percentage_accuracy:.2f}%")
